@@ -140,7 +140,7 @@
     - 宁波城区 `wugniu_gninpou`
     - 鄞县（钟公庙） `wugniu_gninyu_tsonkonmiau`
 
-## 安裝方法
+## 安装方法
 
 ### Windows
 
