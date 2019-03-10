@@ -1,4 +1,4 @@
-【[繁體](https://github.com/NGLI/rime-wugniu#吳語學堂拼音輸入方案合集)】 【[简体](吴语学堂拼音输入方案合集)】
+【[繁體](https://github.com/NGLI/rime-wugniu#吳語學堂拼音輸入方案合集)】 【[简体](https://github.com/NGLI/rime-wugniu#吳語學堂拼音輸入方案合集)】
 
 # 吳語學堂拼音輸入方案合集
 
@@ -213,4 +213,3 @@
 5. 长按输入法左下角“選單”，在选单中选择输入法。
 
 有需要的话，也可以参阅Rime输入法的[文档](https://rime.im/docs/)。
-
