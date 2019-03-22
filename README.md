@@ -18,11 +18,19 @@
     - `wugniu_gninpou`: 宁波城区
     - `wugniu_gninyu_tsonkonmiau`: 鄞县（钟公庙）
 
-## 联系
+## 字音查询
 
-- [吳語學堂](https://www.wugniu.com/)
+https://www.wugniu.com/
 
 ## 致谢
 
 - [Rime](https://rime.im/)
+- [Trime](https://github.com/osfans/trime)
 
+## 联系
+
+吴语学堂：
+
+- QQ群：46520589
+- 微信公众号：wu_gniu
+- 微博：吳語學堂
