@@ -17,18 +17,24 @@
 
     要安装其他输入法，只需将`NGLI/rime-wugniu_gninpou`替换为仓库地址就可以了。注意是**仓库地址**不是输入法的方案名称。
 
-4. 在用户文件夹（`~/Library/Rime/`）内新建文件`default.custom.yaml`，在新建的文件中写入类似下面的语句。
+4. 在用户文件夹（`~/Library/Rime/`）内新建文件`default.custom.yaml`，在新建的文件中写入如下语句。
 
     ```yaml
     patch:
       schema_list:
-        - schema: luna_pinyin
-        - schema: stroke
-        - schema: wugniu_gninpou
-        - schema: wugniu_gninyu_tsonkonmiau
+        - schema: wugniu_zaonhe             # 上海
+        - schema: wugniu_sonkaon            # 松江
+        - schema: wugniu_soutseu            # 苏州
+        - schema: wugniu_donshian           # 桐乡
+        - schema: wugniu_haegnin            # 海宁
+        - schema: wugniu_haeye              # 海盐
+        - schema: wugniu_kashin             # 嘉兴
+        - schema: wugniu_kazoe              # 嘉善
+        - schema: wugniu_gninpou            # 宁波
+        - schema: wugniu_gninyu_tsonkonmiau # 鄞县（钟公庙）
     ```
 
-    `-schema: `后面跟输入方案的名称。如果需要其他输入法，可以自行在列表中修改添加。具体可以参照Rime官方的[教程](https://github.com/rime/home/wiki/CustomizationGuide#一例定製方案選單)。
+    `-schema: `后面跟输入方案的名称。不需要某种输入法，就将那一行删去。如果需要更多的输入法，也可以自行在列表中修改添加。具体可以参照Rime官方的[教程](https://github.com/rime/home/wiki/CustomizationGuide#一例定製方案選單)。
 
 5. 在输入法状态栏上点击“重新部署”。等待一段时间。
 
