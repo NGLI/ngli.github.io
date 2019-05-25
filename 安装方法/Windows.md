@@ -62,6 +62,10 @@
 
 ![菜单](Windows.assets/菜单.png)
 
-视频教程：https://www.bilibili.com/video/av43252366
+视频教程：
+
+https://www.bilibili.com/video/av43252366
+
+https://www.bilibili.com/video/av49332534
 
 有需要的话，也可以参阅Rime输入法的[文档](https://rime.im/docs/)。
