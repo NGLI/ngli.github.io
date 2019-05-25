@@ -1,4 +1,3 @@
-
 # 吴语学堂拼音输入方案合集
 
 ## 方案列表
@@ -17,6 +16,20 @@
 - ℞ **[`NGLI/rime-wugniu_gninpou`](https://github.com/NGLI/rime-wugniu_gninpou)**: 宁波吴语
     - `wugniu_gninpou`: 宁波城区
     - `wugniu_gninyu_tsonkonmiau`: 鄞县（钟公庙）
+
+## 安装方法
+
+- [Windows](安装方法/Windows.md)
+- [macOS](安装方法/macOS.md)
+- [Linux](安装方法/Linux.md)
+- [Android](安装方法/Android.md)
+- [iOS](安装方法/iOS.md)
+
+## 使用
+
+- [模糊音](使用/模糊音.md)
+- [输入提示](使用/输入提示.md)
+- [反查](使用/反查.md)
 
 ## 字音查询
 
