@@ -17,7 +17,7 @@
     - [朙月拼音](https://codeload.github.com/rime/rime-luna-pinyin/zip/master)
     - [五筆畫](https://codeload.github.com/rime/rime-stroke/zip/master)
 
-5. 解压第3步和第4步下载好的几个压缩包，找到所有以`.yaml`结尾的文件，将它们放到手机的`/sdcard/rime`文件夹（主目录下的`rime`文件夹）。
+5. 解压第3步和第4步下载好的几个压缩包，找到所有以`.yaml`结尾的文件，将它们放到安卓设备的`/sdcard/rime`文件夹（主目录下的`rime`文件夹）。
 
 6. 放好后，再次打开同文输入法。选择“部署”，等待一段时间后，再选择“输入”>“方案”，根据自己的需要勾选输入方案。选完点“确定”。
 
