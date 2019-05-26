@@ -1,6 +1,6 @@
 # Android
 
-1. 安装同文输入法。具体可以参照Trime的[网站](https://github.com/osfans/trime)。
+1. 安装同文输入法。具体可以参照Trime的[网站](https://github.com/osfans/trime#同文安卓輸入法平臺trime-rime-ime-for-android)。
 
 2. 安装好之后，打开同文输入法，点击“启用”，再点击“选取”选择同文输入法平台。
 
