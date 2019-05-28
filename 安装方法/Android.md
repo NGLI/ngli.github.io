@@ -11,9 +11,10 @@
     - [嘉兴](https://codeload.github.com/NGLI/rime-wugniu_kashin/zip/master)（包含桐乡、海宁、海盐、嘉兴、嘉善五种口音）
     - [宁波](https://codeload.github.com/NGLI/rime-wugniu_gninpou/zip/master)（包含宁波城区和鄞县（钟公庙）两种口音）
 
-4. 输入法需要基础配置文件，同时也依赖朙月拼音和五筆畫实现反查。点击下方链接下载。
+4. 输入法需要基础配置文件和基础词表，同时也依赖朙月拼音和五筆畫实现反查。点击下方链接下载。
 
     - [Rime 輸入法基礎配置](https://codeload.github.com/rime/rime-prelude/zip/master)
+    - [essay](https://codeload.github.com/rime/rime-essay/zip/master)
     - [朙月拼音](https://codeload.github.com/rime/rime-luna-pinyin/zip/master)
     - [五筆畫](https://codeload.github.com/rime/rime-stroke/zip/master)
 
