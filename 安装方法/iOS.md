@@ -4,19 +4,20 @@
 
 2. 在电脑上点击下方链接，下载输入法文件。
 
-    - [上海](https://codeload.github.com/NGLI/rime-wugniu_zaonhe/zip/master)（包含上海和松江两种口音）
+    - [上海](https://codeload.github.com/NGLI/rime-wugniu_zaonhe/zip/master)（包含中派上海、老派上海和松江三种口音）
     - [苏州](https://codeload.github.com/NGLI/rime-wugniu_soutseu/zip/master)
     - [嘉兴](https://codeload.github.com/NGLI/rime-wugniu_kashin/zip/master)（包含桐乡、海宁、海盐、嘉兴、嘉善五种口音）
     - [宁波](https://codeload.github.com/NGLI/rime-wugniu_gninpou/zip/master)（包含宁波城区和鄞县（钟公庙）两种口音）
 
 3. 解压下载好的压缩包，找到以`.yaml`结尾的输入法文件。
 
-4. 点击[此处](https://gist.github.com/shinzoqchiuq/ddeb5014026fce768f7c9ec7d4e01655/archive/ab0d24e10f6ceb1f0797b516cbcbe17f73425d1e.zip)下载压缩包，解压后可得配置文件`default.custom.yaml`。打开文件，应当显示为如下内容。
+4. 点击[此处](https://gist.github.com/shinzoqchiuq/ddeb5014026fce768f7c9ec7d4e01655/archive/5a212e72d35846a31adace031f73b1320484c280.zip)下载压缩包，解压后可得配置文件`default.custom.yaml`。打开文件，应当显示为如下内容。
 
     ```yaml
     patch:
       schema_list:
         - schema: wugniu_zaonhe             # 上海
+        - schema: wugniu_zaonhe_laupha      # 上海（老派）
         - schema: wugniu_sonkaon            # 松江
         - schema: wugniu_soutseu            # 苏州
         - schema: wugniu_donshian           # 桐乡

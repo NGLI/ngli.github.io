@@ -6,7 +6,7 @@
 
 3. 点击下方链接，下载输入法文件。
 
-    - [上海](https://codeload.github.com/NGLI/rime-wugniu_zaonhe/zip/master)（包含上海和松江两种口音）
+    - [上海](https://codeload.github.com/NGLI/rime-wugniu_zaonhe/zip/master)（包含中派上海、老派上海和松江三种口音）
     - [苏州](https://codeload.github.com/NGLI/rime-wugniu_soutseu/zip/master)
     - [嘉兴](https://codeload.github.com/NGLI/rime-wugniu_kashin/zip/master)（包含桐乡、海宁、海盐、嘉兴、嘉善五种口音）
     - [宁波](https://codeload.github.com/NGLI/rime-wugniu_gninpou/zip/master)（包含宁波城区和鄞县（钟公庙）两种口音）
