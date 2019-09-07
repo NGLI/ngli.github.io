@@ -4,6 +4,7 @@
 
 - ℞ **[`NGLI/rime-wugniu_zaonhe`](https://github.com/NGLI/rime-wugniu_zaonhe)**: 上海吴语
     - `wugniu_zaonhe`: 上海
+    - `wugniu_zaonhe`: 上海（老派）
     - `wugniu_sonkaon`: 松江
 - ℞ **[`NGLI/rime-wugniu_soutseu`](https://github.com/NGLI/rime-wugniu_soutseu)**: 苏州吴语
     - `wugniu_soutseu`: 苏州
