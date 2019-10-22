@@ -1,6 +1,6 @@
 # Android
 
-1. 安装同文输入法。具体可以参照Trime的[网站](https://github.com/osfans/trime#同文安卓輸入法平臺trime-rime-ime-for-android)。
+1. 安装同文输入法。具体可以参照 Trime 的 [网站](https://github.com/osfans/trime#同文安卓輸入法平臺trime-rime-ime-for-android)。
 
 2. 安装好之后，打开同文输入法，点击“启用”，再点击“选取”选择同文输入法平台。
 
@@ -18,10 +18,10 @@
     - [朙月拼音](https://codeload.github.com/rime/rime-luna-pinyin/zip/master)
     - [五筆畫](https://codeload.github.com/rime/rime-stroke/zip/master)
 
-5. 解压第3步和第4步下载好的几个压缩包，找到所有以`.yaml`结尾的文件，将它们放到安卓设备的`/sdcard/rime`文件夹（主目录下的`rime`文件夹）。
+5. 解压第 3 步和第 4 步下载好的几个压缩包，找到所有以 `.yaml` 结尾的文件，将它们放到安卓设备的 `/sdcard/rime` 文件夹（主目录下的 `rime` 文件夹）。
 
 6. 放好后，再次打开同文输入法。选择“部署”，等待一段时间后，再选择“输入”>“方案”，根据自己的需要勾选输入方案。选完点“确定”。
 
 7. 到打字界面，长按输入法左下角“選單”，在选单中选择输入法。
 
-有需要的话，也可以参阅Rime输入法的[文档](https://rime.im/docs/)。
+有需要的话，也可以参阅Rime输入法的 [文档](https://rime.im/docs/)。
