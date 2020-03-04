@@ -15,8 +15,8 @@
     - `wugniu_kashin`：嘉兴
     - `wugniu_kazoe`：嘉善
 - ℞ **[`NGLI/rime-wugniu_gninpou`](https://github.com/NGLI/rime-wugniu_gninpou)**：宁波吴语
-    - `wugniu_gninpou`：宁波城区
-    - `wugniu_gninyu_tsonkonmiau`：鄞县（钟公庙）
+    - `wugniu_gninpou`：宁波
+    - `wugniu_gnincieu`：鄞州
 
 ## 安装方法
 
