@@ -61,17 +61,17 @@
     ```yaml
     patch:
       schema_list:
-        - schema: wugniu_zaonhe             # 上海
-        - schema: wugniu_zaonhe_laupha      # 上海（老派）
-        - schema: wugniu_sonkaon            # 松江
-        - schema: wugniu_soutseu            # 苏州
-        - schema: wugniu_donshian           # 桐乡
-        - schema: wugniu_haegnin            # 海宁
-        - schema: wugniu_haeye              # 海盐
-        - schema: wugniu_kashin             # 嘉兴
-        - schema: wugniu_kazoe              # 嘉善
-        - schema: wugniu_gninpou            # 宁波
-        - schema: wugniu_gnincieu           # 鄞州
+        - schema: wugniu_zaonhe        # 上海
+        - schema: wugniu_zaonhe_laupha # 上海（老派）
+        - schema: wugniu_sonkaon       # 松江
+        - schema: wugniu_soutseu       # 苏州
+        - schema: wugniu_donshian      # 桐乡
+        - schema: wugniu_haegnin       # 海宁
+        - schema: wugniu_haeye         # 海盐
+        - schema: wugniu_kashin        # 嘉兴
+        - schema: wugniu_kazoe         # 嘉善
+        - schema: wugniu_gninpou       # 宁波
+        - schema: wugniu_gnincieu      # 鄞州
     ```
 
     `-schema: ` 后面跟输入方案的名称。不需要某种输入法，就将那一行删去。如果需要更多的输入法，也可以自行在列表中修改添加。具体可以参照Rime官方的 [教程](https://github.com/rime/home/wiki/CustomizationGuide#一例定製方案選單)。
