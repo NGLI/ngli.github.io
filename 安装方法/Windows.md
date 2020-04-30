@@ -78,8 +78,8 @@
 
 以下两个视频教程是以版本 0.13.0 为例讲解的，与当前版本的安装方法有差异，仅供参考。
 
-https://www.bilibili.com/video/av43252366
+https://www.bilibili.com/video/BV1db411S7gf
 
-https://www.bilibili.com/video/av49332534
+https://www.bilibili.com/video/BV1qb411L7xt
 
 有需要的话，也可以参阅Rime输入法的 [文档](https://rime.im/docs/)。
