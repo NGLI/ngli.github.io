@@ -24,4 +24,4 @@
 
 7. 到打字界面，长按输入法左下角“選單”，在选单中选择输入法。
 
-有需要的话，也可以参阅Rime输入法的 [文档](https://rime.im/docs/)。
+有需要的话，也可以参阅 Trime 输入法的 [文档](https://github.com/osfans/trime/wiki/UserGuide)。

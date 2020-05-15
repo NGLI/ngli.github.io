@@ -29,7 +29,7 @@
         - schema: wugniu_gnincieu      # 鄞州
     ```
 
-    `-schema: ` 后面跟输入方案的名称。不需要某种输入法，就将那一行删去，只保留需要的。如果需要更多的输入法，也可以自行在列表中修改添加。具体可以参照Rime官方的 [教程](https://github.com/rime/home/wiki/CustomizationGuide#一例定製方案選單)。
+    `-schema: ` 后面跟输入方案的名称。不需要某种输入法，就将那一行删去，只保留需要的。如果需要更多的输入法，也可以自行在列表中修改添加。具体可以参照 Rime 官方的 [教程](https://github.com/rime/home/wiki/CustomizationGuide#一例定製方案選單)。
 
 5. 确保电脑和 iOS 设备处在同一个 WiFi 下。在 iOS 设备上点击 iRime 的图标，选择“电脑快传”。按照说明在电脑浏览器上输入 iOS 设备上显示的网址。
 

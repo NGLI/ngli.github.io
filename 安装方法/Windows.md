@@ -82,4 +82,4 @@ https://www.bilibili.com/video/BV1db411S7gf
 
 https://www.bilibili.com/video/BV1qb411L7xt
 
-有需要的话，也可以参阅Rime输入法的 [文档](https://rime.im/docs/)。
+有需要的话，也可以参阅 Rime 输入法的 [文档](https://rime.im/docs/)。

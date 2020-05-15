@@ -2,7 +2,7 @@
 
 ### 方法一
 
-1. 安装Rime输入法。安装和使用方法见Rime输入法的网站 https://rime.im/ 。
+1. 安装 Rime 输入法。安装和使用方法见 Rime 输入法的网站 https://rime.im/ 。
 
 2. 在终端内运行以下命令，安装 [東風破](https://github.com/rime/plum)（需要先安装 [git](https://git-scm.com/)）。
 
@@ -80,4 +80,4 @@
 
 6. 按`F4`或`` Ctrl+` ``，从选单中选择想要的输入法。
 
-有需要的话，也可以参阅Rime输入法的 [文档](https://rime.im/docs/)。
+有需要的话，也可以参阅 Rime 输入法的 [文档](https://rime.im/docs/)。
