@@ -18,7 +18,7 @@
     - `wugniu_gninpou`：宁波
     - `wugniu_gnincieu`：鄞州
 
-## 安装方法
+## [安装方法](安装方法/安装方法.md)
 
 - [Windows](安装方法/Windows.md)
 - [macOS](安装方法/macOS.md)
@@ -26,7 +26,7 @@
 - [Android](安装方法/Android.md)
 - [iOS](安装方法/iOS.md)
 
-## 使用
+## [使用](使用/使用.md)
 
 - [模糊音](使用/模糊音.md)
 - [输入提示](使用/输入提示.md)
