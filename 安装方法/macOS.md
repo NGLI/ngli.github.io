@@ -11,7 +11,7 @@
     - [嘉兴](https://codeload.github.com/NGLI/rime-wugniu_kashin/zip/master)（包含桐乡、海宁、海盐、嘉兴、嘉善五种口音）
     - [宁波](https://codeload.github.com/NGLI/rime-wugniu_gninpou/zip/master)（包含宁波和鄞州两种口音）
     
-3. 点击 [此处](https://gist.github.com/shinzoqchiuq/ddeb5014026fce768f7c9ec7d4e01655/archive/fee2956c60f5eba8bd8af57bbe3a9a20150f9b25.zip) 下载压缩包，解压后可得配置文件 `default.custom.yaml`。将上一步下载的输入法文件和这一步下载的配置文件放到Rime的用户文件夹（`~/Library/Rime/`，可以通过点击输入法状态栏上的Rime图标，选择“用户设定...”来打开）。
+3. 点击 [此处](https://github.com/shinzoqchiuq/ngli-default.custom.yaml/archive/refs/heads/main.zip) 下载压缩包，解压后可得配置文件 `default.custom.yaml`。将上一步下载的输入法文件和这一步下载的配置文件放到Rime的用户文件夹（`~/Library/Rime/`，可以通过点击输入法状态栏上的Rime图标，选择“用户设定...”来打开）。
 
 4. 打开配置文件 `default.custom.yaml`，应当显示为如下内容。
 
@@ -56,7 +56,7 @@
 
     要安装其他输入法，只需将 `NGLI/rime-wugniu_gninpou` 替换为仓库地址就可以了。注意是**仓库地址**不是输入法的方案名称。
 
-4. 点击 [此处](https://gist.github.com/shinzoqchiuq/ddeb5014026fce768f7c9ec7d4e01655/archive/fee2956c60f5eba8bd8af57bbe3a9a20150f9b25.zip) 下载压缩包，解压后可得配置文件`default.custom.yaml`，将它放到Rime的用户文件夹（`~/Library/Rime/`，可以通过点击Rime图标选择“用户设定...”来打开）内。打开文件，应当显示为如下内容。
+4. 点击 [此处](https://github.com/shinzoqchiuq/ngli-default.custom.yaml/archive/refs/heads/main.zip) 下载压缩包，解压后可得配置文件`default.custom.yaml`，将它放到Rime的用户文件夹（`~/Library/Rime/`，可以通过点击Rime图标选择“用户设定...”来打开）内。打开文件，应当显示为如下内容。
 
     ```yaml
     patch:

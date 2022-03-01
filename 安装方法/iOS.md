@@ -11,7 +11,7 @@
 
 3. 解压下载好的压缩包，找到以 `.yaml` 结尾的输入法文件。
 
-4. 点击 [此处](https://gist.github.com/shinzoqchiuq/ddeb5014026fce768f7c9ec7d4e01655/archive/fee2956c60f5eba8bd8af57bbe3a9a20150f9b25.zip) 下载压缩包，解压后可得配置文件 `default.custom.yaml`。打开文件，应当显示为如下内容。
+4. 点击 [此处](https://github.com/shinzoqchiuq/ngli-default.custom.yaml/archive/refs/heads/main.zip) 下载压缩包，解压后可得配置文件 `default.custom.yaml`。打开文件，应当显示为如下内容。
 
     ```yaml
     patch:
