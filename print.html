@@ -1,0 +1,639 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>吴语学堂拼音输入方案合集</title>
+        <meta name="robots" content="noindex" />
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="index.html"><strong aria-hidden="true">1.</strong> 吴语学堂拼音输入方案合集</a></li><li class="chapter-item expanded "><a href="安装方法/安装方法.html"><strong aria-hidden="true">2.</strong> 安装方法</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="安装方法/Windows.html"><strong aria-hidden="true">2.1.</strong> Windows</a></li><li class="chapter-item expanded "><a href="安装方法/macOS.html"><strong aria-hidden="true">2.2.</strong> macOS</a></li><li class="chapter-item expanded "><a href="安装方法/Linux.html"><strong aria-hidden="true">2.3.</strong> Linux</a></li><li class="chapter-item expanded "><a href="安装方法/Android.html"><strong aria-hidden="true">2.4.</strong> Android</a></li><li class="chapter-item expanded "><a href="安装方法/iOS.html"><strong aria-hidden="true">2.5.</strong> iOS</a></li></ol></li><li class="chapter-item expanded "><a href="使用/使用.html"><strong aria-hidden="true">3.</strong> 使用</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="使用/模糊音.html"><strong aria-hidden="true">3.1.</strong> 模糊音</a></li><li class="chapter-item expanded "><a href="使用/输入提示.html"><strong aria-hidden="true">3.2.</strong> 输入提示</a></li><li class="chapter-item expanded "><a href="使用/反查.html"><strong aria-hidden="true">3.3.</strong> 反查</a></li><li class="chapter-item expanded "><a href="使用/自定义短语.html"><strong aria-hidden="true">3.4.</strong> 自定义短语</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">吴语学堂拼音输入方案合集</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="吴语学堂拼音输入方案合集"><a class="header" href="#吴语学堂拼音输入方案合集">吴语学堂拼音输入方案合集</a></h1>
+<h2 id="方案列表"><a class="header" href="#方案列表">方案列表</a></h2>
+<ul>
+<li>℞ <strong><a href="https://github.com/NGLI/rime-wugniu_zaonhe"><code>NGLI/rime-wugniu_zaonhe</code></a></strong>：上海吴语
+<ul>
+<li><code>wugniu_zaonhe</code>：上海</li>
+<li><code>wugniu_zaonhe</code>：上海（老派）</li>
+<li><code>wugniu_sonkaon</code>：松江</li>
+</ul>
+</li>
+<li>℞ <strong><a href="https://github.com/NGLI/rime-wugniu_soutseu"><code>NGLI/rime-wugniu_soutseu</code></a></strong>：苏州吴语
+<ul>
+<li><code>wugniu_soutseu</code>：苏州</li>
+</ul>
+</li>
+<li>℞ <strong><a href="https://github.com/NGLI/rime-wugniu_kashin"><code>NGLI/rime-wugniu_kashin</code></a></strong>：嘉兴吴语（五县两区）
+<ul>
+<li><code>wugniu_donshian</code>：桐乡</li>
+<li><code>wugniu_haegnin</code>：海宁</li>
+<li><code>wugniu_haeye</code>：海盐</li>
+<li><code>wugniu_kashin</code>：嘉兴</li>
+<li><code>wugniu_kazoe</code>：嘉善</li>
+</ul>
+</li>
+<li>℞ <strong><a href="https://github.com/NGLI/rime-wugniu_gninpou"><code>NGLI/rime-wugniu_gninpou</code></a></strong>：宁波吴语
+<ul>
+<li><code>wugniu_gninpou</code>：宁波</li>
+<li><code>wugniu_gnincieu</code>：鄞州</li>
+</ul>
+</li>
+</ul>
+<h2 id="安装方法"><a class="header" href="#安装方法">安装方法</a></h2>
+<ul>
+<li><a href="%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95/Windows.html">Windows</a></li>
+<li><a href="%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95/macOS.html">macOS</a></li>
+<li><a href="%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95/Linux.html">Linux</a></li>
+<li><a href="%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95/Android.html">Android</a></li>
+<li><a href="%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95/iOS.html">iOS</a></li>
+</ul>
+<h2 id="使用"><a class="header" href="#使用">使用</a></h2>
+<ul>
+<li><a href="%E4%BD%BF%E7%94%A8/%E6%A8%A1%E7%B3%8A%E9%9F%B3.html">模糊音</a></li>
+<li><a href="%E4%BD%BF%E7%94%A8/%E8%BE%93%E5%85%A5%E6%8F%90%E7%A4%BA.html">输入提示</a></li>
+<li><a href="%E4%BD%BF%E7%94%A8/%E5%8F%8D%E6%9F%A5.html">反查</a></li>
+<li><a href="%E4%BD%BF%E7%94%A8/%E8%87%AA%E5%AE%9A%E4%B9%89%E7%9F%AD%E8%AF%AD.html">自定义短语</a></li>
+</ul>
+<h2 id="字音查询"><a class="header" href="#字音查询">字音查询</a></h2>
+<p>https://www.wugniu.com/</p>
+<h2 id="鸣谢"><a class="header" href="#鸣谢">鸣谢</a></h2>
+<ul>
+<li><a href="https://rime.im/">Rime</a></li>
+<li><a href="https://github.com/osfans/trime">Trime</a></li>
+<li><a href="https://github.com/jimmy54/iRime">iRime</a></li>
+</ul>
+<h2 id="联系"><a class="header" href="#联系">联系</a></h2>
+<p><a href="https://www.wugniu.com/">吴语学堂</a>：</p>
+<ul>
+<li>QQ群：955201855</li>
+<li>微信公众号：wugniu_com</li>
+<li>微博：<a href="https://weibo.com/u/6541762299">吴语学堂微博</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="安装方法-1"><a class="header" href="#安装方法-1">安装方法</a></h2>
+<ul>
+<li><a href="%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95/Windows.html">Windows</a></li>
+<li><a href="%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95/macOS.html">macOS</a></li>
+<li><a href="%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95/Linux.html">Linux</a></li>
+<li><a href="%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95/Android.html">Android</a></li>
+<li><a href="%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95/iOS.html">iOS</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="windows下安装方法"><a class="header" href="#windows下安装方法">Windows下安装方法</a></h1>
+<h3 id="安装时添加输入方案"><a class="header" href="#安装时添加输入方案">安装时添加输入方案</a></h3>
+<ol>
+<li>
+<p>打开 Rime 输入法的网站 https://rime.im/ ，点击小狼毫的图标下载输入法的安装包。当前版本为 0.14.3。</p>
+<p><img src="%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95/Windows.assets/Windows_%E4%B8%8B%E8%BD%BD_Rime.png" alt="Windows_下载_Rime" /></p>
+</li>
+<li>
+<p>下载好安装包之后，双击安装。</p>
+<p>如果弹出警告，点开“更多信息”选择“仍要运行”。（下图是安装 0.13.0 版时截的图，0.14.3 版类似）</p>
+<p><img src="%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95/Windows.assets/%E4%BB%8D%E8%A6%81%E8%BF%90%E8%A1%8C.png" alt="仍要运行" /></p>
+<p>同意许可证，选择安装位置。点击“安装”。</p>
+<p><img src="%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95/Windows.assets/Windows_Rime_%E5%AE%89%E8%A3%851.png" alt="Windows_Rime_安装1" /></p>
+<p><img src="%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95/Windows.assets/Windows_Rime_%E5%AE%89%E8%A3%852.png" alt="Windows_Rime_安装2" /></p>
+</li>
+<li>
+<p>如果是第一次安装，安装进行到一半的时候，会弹出“【小狼毫】安裝選項”的界面。这里可以设定将输入法安装到哪种系统语言下，也可以自定义用户文件夹的位置。这里建议使用默认位置，避免给之后安装输入方案带来不必要的麻烦。选择完后点击“安裝”。</p>
+<p><img src="%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95/Windows.assets/%E5%AE%89%E8%A3%9D%E9%81%B8%E9%A0%85.png" alt="安裝選項" /></p>
+</li>
+<li>
+<p>稍等一段时间，等到安装程序提示成功。点击“完成”结束安装。</p>
+<p><img src="%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95/Windows.assets/Windows_Rime_%E5%AE%89%E8%A3%853.png" alt="Windows_Rime_安装3" /></p>
+</li>
+<li>
+<p>点击在任务栏上输入法的图标，选择小狼毫。</p>
+<p><img src="%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95/Windows.assets/%E9%80%89%E6%8B%A9%E5%B0%8F%E7%8B%BC%E6%AF%AB.png" alt="选择小狼毫" /></p>
+<p>选择好之后，打开任何一个编辑器或输入框，按 <code>F4</code> 或 <code>Ctrl+`</code> 唤出“方案選單”，可以发现选单中已经有了几种输入方案。如果没有更多需求的话，就可以选一种打字了。</p>
+<p><img src="%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95/Windows.assets/%E6%96%B9%E6%A1%88%E9%81%B8%E5%96%AE1.png" alt="方案選單1" /></p>
+</li>
+</ol>
+<h3 id="添加输入方案--更新输入方案"><a class="header" href="#添加输入方案--更新输入方案">添加输入方案 / 更新输入方案</a></h3>
+<p>如果需要添加更多输入方案，可以参照以下步骤。</p>
+<ol>
+<li>
+<p>在任务栏 Rime 图标这边右键打开菜单。</p>
+<p><img src="%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95/Windows.assets/%E5%8F%B3%E9%94%AE%E6%89%93%E5%BC%80%E8%8F%9C%E5%8D%95.png" alt="右键打开菜单" /></p>
+</li>
+<li>
+<p>打开后选择“輸入法設定”，就能进入“【小狼毫】方案選單設定”的界面。点击下方的“獲取更多輸入法方案...”。</p>
+<p><img src="%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95/Windows.assets/%E6%96%B9%E6%A1%88%E9%81%B8%E5%96%AE%E8%A8%AD%E5%AE%9A1.png" alt="方案選單設定1" /></p>
+</li>
+<li>
+<p>点完会弹出一个命令行界面。在这个命令行中输入仓库的地址。仓库地址在输入方案网页的左上角。注意是输入<strong>仓库地址</strong>，而非输入方案的名称。</p>
+<p><img src="%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95/Windows.assets/%E4%BB%93%E5%BA%93%E5%9C%B0%E5%9D%80.png" alt="仓库地址" /></p>
+<p>比如要安装宁波话输入法，就可以输入 <code>NGLI/rime-wugniu_gninpou</code>。</p>
+<p>输入完按下回车，等待一段时间。</p>
+<p><img src="%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95/Windows.assets/plum.png" alt="plum" /></p>
+</li>
+<li>
+<p>等到命令行界面不再变化，就可以关掉命令行界面了。再回到“【小狼毫】方案選單設定”的界面，可以发现输入法选单多了几种输入法。可以点击输入法的名字查看输入法的简介，然后根据个人需要勾选。选完点击“中”。</p>
+<p><img src="%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95/Windows.assets/%E6%96%B9%E6%A1%88%E9%81%B8%E5%96%AE%E8%A8%AD%E5%AE%9A2.png" alt="方案選單設定2" /></p>
+<p>之后是介面風格設定，选择一个自己喜欢的配色即可。选完点击“中”。</p>
+<p><img src="%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95/Windows.assets/%E4%BB%8B%E9%9D%A2%E9%A2%A8%E6%A0%BC%E8%A8%AD%E5%AE%9A.png" alt="介面風格設定" /></p>
+</li>
+<li>
+<p>完成后，再次右键任务栏 Rime 图标打开菜单，选择“重新部署”。稍等一会儿，待其部署完成即可。</p>
+<p><img src="%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95/Windows.assets/%E8%8F%9C%E5%8D%95.png" alt="菜单" /></p>
+<p>这种方法可以用于添加或更新输入方案。更新输入方案时，有可能出现更新失败的情形。可以到用户文件夹下，将已有的输入法文件删除。再试着重新安装一遍输入方案。</p>
+</li>
+<li>
+<p>安装完输入方案后，打开任何一个编辑器或输入框，按 <code>F4</code> 或 <code>Ctrl+`</code> 唤出“方案選單”，从选单中选择想要的输入法。开始打字。</p>
+<p><img src="%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95/Windows.assets/%E6%96%B9%E6%A1%88%E9%81%B8%E5%96%AE2.png" alt="方案選單2" /></p>
+</li>
+</ol>
+<h3 id="视频教程"><a class="header" href="#视频教程">视频教程：</a></h3>
+<p>以下两个视频教程是以版本 0.13.0 为例讲解的，与当前版本的安装方法有差异，仅供参考。</p>
+<p>https://www.bilibili.com/video/BV1db411S7gf</p>
+<p>https://www.bilibili.com/video/BV1qb411L7xt</p>
+<p>有需要的话，也可以参阅 Rime 输入法的 <a href="https://rime.im/docs/">文档</a>。</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="macos下安装方法"><a class="header" href="#macos下安装方法">macOS下安装方法</a></h1>
+<h3 id="方法一"><a class="header" href="#方法一">方法一</a></h3>
+<ol>
+<li>
+<p>安装 Rime 输入法。安装和使用方法见 Rime 输入法的网站 https://rime.im/ 。</p>
+</li>
+<li>
+<p>点击下方链接，下载输入法文件。</p>
+<ul>
+<li><a href="https://codeload.github.com/NGLI/rime-wugniu_zaonhe/zip/master">上海</a>（包含中派上海、老派上海和松江三种口音）</li>
+<li><a href="https://codeload.github.com/NGLI/rime-wugniu_soutseu/zip/master">苏州</a></li>
+<li><a href="https://codeload.github.com/NGLI/rime-wugniu_kashin/zip/master">嘉兴</a>（包含桐乡、海宁、海盐、嘉兴、嘉善五种口音）</li>
+<li><a href="https://codeload.github.com/NGLI/rime-wugniu_gninpou/zip/master">宁波</a>（包含宁波和鄞州两种口音）</li>
+</ul>
+</li>
+<li>
+<p>点击 <a href="https://github.com/shinzoqchiuq/ngli-default.custom.yaml/archive/refs/heads/main.zip">此处</a> 下载压缩包，解压后可得配置文件 <code>default.custom.yaml</code>。将上一步下载的输入法文件和这一步下载的配置文件放到Rime的用户文件夹（<code>~/Library/Rime/</code>，可以通过点击输入法状态栏上的Rime图标，选择“用户设定...”来打开）。</p>
+</li>
+<li>
+<p>打开配置文件 <code>default.custom.yaml</code>，应当显示为如下内容。</p>
+<pre><code class="language-yaml">patch:
+schema_list:
+    - schema: wugniu_zaonhe        # 上海
+    - schema: wugniu_zaonhe_laupha # 上海（老派）
+    - schema: wugniu_sonkaon       # 松江
+    - schema: wugniu_soutseu       # 苏州
+    - schema: wugniu_donshian      # 桐乡
+    - schema: wugniu_haegnin       # 海宁
+    - schema: wugniu_haeye         # 海盐
+    - schema: wugniu_kashin        # 嘉兴
+    - schema: wugniu_kazoe         # 嘉善
+    - schema: wugniu_gninpou       # 宁波
+    - schema: wugniu_gnincieu      # 鄞州
+</code></pre>
+<p><code>-schema: </code> 后面跟输入方案的名称。不需要某种输入法，就将那一行删去。如果需要更多的输入法，也可以自行在列表中修改添加。具体可以参照Rime官方的 <a href="https://github.com/rime/home/wiki/CustomizationGuide#%E4%B8%80%E4%BE%8B%E5%AE%9A%E8%A3%BD%E6%96%B9%E6%A1%88%E9%81%B8%E5%96%AE">教程</a>。</p>
+</li>
+<li>
+<p>在输入法状态栏上点击“重新部署”。等待一段时间。</p>
+</li>
+<li>
+<p>按<code>F4</code>或<code>Ctrl+`</code>，从选单中选择想要的输入法。</p>
+</li>
+</ol>
+<h3 id="方法二"><a class="header" href="#方法二">方法二</a></h3>
+<ol>
+<li>
+<p>安装 Rime 输入法。安装和使用方法见 Rime 输入法的网站 https://rime.im/ 。</p>
+</li>
+<li>
+<p>在终端内运行以下命令，安装 <a href="https://github.com/rime/plum">東風破</a>（需要先安装 <a href="https://git-scm.com/">git</a>）。</p>
+<pre><code class="language-shell">curl -fsSL https://git.io/rime-install | bash
+</code></pre>
+</li>
+<li>
+<p>以安装宁波话输入法为例，运行以下命令，下载输入法码表。</p>
+<pre><code class="language-shell">cd plum
+bash rime-install NGLI/rime-wugniu_gninpou
+</code></pre>
+<p>要安装其他输入法，只需将 <code>NGLI/rime-wugniu_gninpou</code> 替换为仓库地址就可以了。注意是<strong>仓库地址</strong>不是输入法的方案名称。</p>
+</li>
+<li>
+<p>点击 <a href="https://github.com/shinzoqchiuq/ngli-default.custom.yaml/archive/refs/heads/main.zip">此处</a> 下载压缩包，解压后可得配置文件<code>default.custom.yaml</code>，将它放到Rime的用户文件夹（<code>~/Library/Rime/</code>，可以通过点击Rime图标选择“用户设定...”来打开）内。打开文件，应当显示为如下内容。</p>
+<pre><code class="language-yaml">patch:
+  schema_list:
+    - schema: wugniu_zaonhe        # 上海
+    - schema: wugniu_zaonhe_laupha # 上海（老派）
+    - schema: wugniu_sonkaon       # 松江
+    - schema: wugniu_soutseu       # 苏州
+    - schema: wugniu_donshian      # 桐乡
+    - schema: wugniu_haegnin       # 海宁
+    - schema: wugniu_haeye         # 海盐
+    - schema: wugniu_kashin        # 嘉兴
+    - schema: wugniu_kazoe         # 嘉善
+    - schema: wugniu_gninpou       # 宁波
+    - schema: wugniu_gnincieu      # 鄞州
+</code></pre>
+<p><code>-schema: </code> 后面跟输入方案的名称。不需要某种输入法，就将那一行删去。如果需要更多的输入法，也可以自行在列表中修改添加。具体可以参照Rime官方的 <a href="https://github.com/rime/home/wiki/CustomizationGuide#%E4%B8%80%E4%BE%8B%E5%AE%9A%E8%A3%BD%E6%96%B9%E6%A1%88%E9%81%B8%E5%96%AE">教程</a>。</p>
+</li>
+<li>
+<p>在输入法状态栏上点击“重新部署”。等待一段时间。</p>
+</li>
+<li>
+<p>按<code>F4</code>或<code>Ctrl+`</code>，从选单中选择想要的输入法。</p>
+</li>
+</ol>
+<p>有需要的话，也可以参阅 Rime 输入法的 <a href="https://rime.im/docs/">文档</a>。</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="linux下安装方法"><a class="header" href="#linux下安装方法">Linux下安装方法</a></h1>
+<h3 id="方法一-1"><a class="header" href="#方法一-1">方法一</a></h3>
+<ol>
+<li>
+<p>安装 Rime 输入法。安装和使用方法见 Rime 输入法的网站 https://rime.im/ 。</p>
+</li>
+<li>
+<p>在终端内运行以下命令，安装 <a href="https://github.com/rime/plum">東風破</a>（需要先安装 <a href="https://git-scm.com/">git</a>）。</p>
+<pre><code class="language-shell">curl -fsSL https://git.io/rime-install | bash
+</code></pre>
+</li>
+<li>
+<p>以安装宁波话输入法为例，运行以下命令，下载输入法码表。</p>
+<pre><code class="language-shell">cd plum
+bash rime-install NGLI/rime-wugniu_gninpou
+</code></pre>
+<p>要安装其他输入法，只需将 <code>NGLI/rime-wugniu_gninpou</code> 替换为仓库地址就可以了。注意是<strong>仓库地址</strong>不是输入法的方案名称。</p>
+</li>
+<li>
+<p>点击 <a href="https://github.com/shinzoqchiuq/ngli-default.custom.yaml/archive/refs/heads/main.zip">此处</a> 下载压缩包，解压后可得配置文件 <code>default.custom.yaml</code>，将它放到 Rime 的用户文件夹（<code>~/.config/ibus/rime/</code>）内。打开文件，应当显示为如下内容。</p>
+<pre><code class="language-yaml">patch:
+schema_list:
+    - schema: wugniu_zaonhe        # 上海
+    - schema: wugniu_zaonhe_laupha # 上海（老派）
+    - schema: wugniu_sonkaon       # 松江
+    - schema: wugniu_soutseu       # 苏州
+    - schema: wugniu_donshian      # 桐乡
+    - schema: wugniu_haegnin       # 海宁
+    - schema: wugniu_haeye         # 海盐
+    - schema: wugniu_kashin        # 嘉兴
+    - schema: wugniu_kazoe         # 嘉善
+    - schema: wugniu_gninpou       # 宁波
+    - schema: wugniu_gnincieu      # 鄞州
+</code></pre>
+<p><code>-schema: </code> 后面跟输入方案的名称。不需要某种输入法，就将那一行删去，只保留需要的。如果需要更多的输入法，也可以自行在列表中修改添加。具体可以参照Rime官方的 <a href="https://github.com/rime/home/wiki/CustomizationGuide#%E4%B8%80%E4%BE%8B%E5%AE%9A%E8%A3%BD%E6%96%B9%E6%A1%88%E9%81%B8%E5%96%AE">教程</a>。</p>
+</li>
+<li>
+<p>在输入法状态栏上点击“部署”。等待一段时间。</p>
+</li>
+<li>
+<p>按<code>F4</code>或<code>Ctrl+`</code>，从选单中选择想要的输入法。</p>
+</li>
+</ol>
+<h3 id="方法二-1"><a class="header" href="#方法二-1">方法二</a></h3>
+<ol>
+<li>
+<p>安装Rime输入法。安装和使用方法见 Rime 输入法的网站 https://rime.im/ 。</p>
+</li>
+<li>
+<p>点击下方链接，下载输入法文件。</p>
+<ul>
+<li><a href="https://codeload.github.com/NGLI/rime-wugniu_zaonhe/zip/master">上海</a>（包含中派上海、老派上海和松江三种口音）</li>
+<li><a href="https://codeload.github.com/NGLI/rime-wugniu_soutseu/zip/master">苏州</a></li>
+<li><a href="https://codeload.github.com/NGLI/rime-wugniu_kashin/zip/master">嘉兴</a>（包含桐乡、海宁、海盐、嘉兴、嘉善五种口音）</li>
+<li><a href="https://codeload.github.com/NGLI/rime-wugniu_gninpou/zip/master">宁波</a>（包含宁波和鄞州两种口音）</li>
+</ul>
+</li>
+<li>
+<p>点击 <a href="https://github.com/shinzoqchiuq/ngli-default.custom.yaml/archive/refs/heads/main.zip">此处</a> 下载压缩包，解压后可得配置文件 <code>default.custom.yaml</code>，将上一步下载的输入法文件和这一步下载的配置文件放到 Rime 的用户文件夹（<code>~/.config/ibus/rime/</code>）内。</p>
+</li>
+<li>
+<p>打开配置文件 <code>default.custom.yaml</code>，应当显示为如下内容。</p>
+<pre><code class="language-yaml">patch:
+schema_list:
+    - schema: wugniu_zaonhe        # 上海
+    - schema: wugniu_zaonhe_laupha # 上海（老派）
+    - schema: wugniu_sonkaon       # 松江
+    - schema: wugniu_soutseu       # 苏州
+    - schema: wugniu_donshian      # 桐乡
+    - schema: wugniu_haegnin       # 海宁
+    - schema: wugniu_haeye         # 海盐
+    - schema: wugniu_kashin        # 嘉兴
+    - schema: wugniu_kazoe         # 嘉善
+    - schema: wugniu_gninpou       # 宁波
+    - schema: wugniu_gnincieu      # 鄞州
+</code></pre>
+<p><code>-schema: </code> 后面跟输入方案的名称。不需要某种输入法，就将那一行删去。如果需要更多的输入法，也可以自行在列表中修改添加。具体可以参照Rime官方的 <a href="https://github.com/rime/home/wiki/CustomizationGuide#%E4%B8%80%E4%BE%8B%E5%AE%9A%E8%A3%BD%E6%96%B9%E6%A1%88%E9%81%B8%E5%96%AE">教程</a>。</p>
+</li>
+<li>
+<p>在输入法状态栏上点击“部署”。等待一段时间。</p>
+</li>
+<li>
+<p>按<code>F4</code>或<code>Ctrl+`</code>，从选单中选择想要的输入法。</p>
+</li>
+</ol>
+<p>有需要的话，也可以参阅 Rime 输入法的 <a href="https://rime.im/docs/">文档</a>。</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="android"><a class="header" href="#android">Android</a></h1>
+<ol>
+<li>
+<p>安装同文输入法。具体可以参照 Trime 的 <a href="https://github.com/osfans/trime#%E5%90%8C%E6%96%87%E5%AE%89%E5%8D%93%E8%BC%B8%E5%85%A5%E6%B3%95%E5%B9%B3%E8%87%BAtrime-rime-ime-for-android">网站</a>。</p>
+</li>
+<li>
+<p>安装好之后，打开同文输入法，点击“启用”，再点击“选取”选择同文输入法平台。</p>
+</li>
+<li>
+<p>点击下方链接，下载输入法文件。</p>
+<ul>
+<li><a href="https://codeload.github.com/NGLI/rime-wugniu_zaonhe/zip/master">上海</a>（包含中派上海、老派上海和松江三种口音）</li>
+<li><a href="https://codeload.github.com/NGLI/rime-wugniu_soutseu/zip/master">苏州</a></li>
+<li><a href="https://codeload.github.com/NGLI/rime-wugniu_kashin/zip/master">嘉兴</a>（包含桐乡、海宁、海盐、嘉兴、嘉善五种口音）</li>
+<li><a href="https://codeload.github.com/NGLI/rime-wugniu_gninpou/zip/master">宁波</a>（包含宁波和鄞州两种口音）</li>
+</ul>
+</li>
+<li>
+<p>输入法需要基础配置文件和基础词表，同时也依赖朙月拼音和五筆畫实现反查。点击下方链接下载。</p>
+<ul>
+<li><a href="https://codeload.github.com/rime/rime-prelude/zip/master">Rime 輸入法基礎配置</a></li>
+<li><a href="https://codeload.github.com/rime/rime-essay/zip/master">essay</a></li>
+<li><a href="https://codeload.github.com/rime/rime-luna-pinyin/zip/master">朙月拼音</a></li>
+<li><a href="https://codeload.github.com/rime/rime-stroke/zip/master">五筆畫</a></li>
+</ul>
+</li>
+<li>
+<p>解压第 3 步和第 4 步下载好的几个压缩包，找到所有以 <code>.yaml</code> 和 <code>.txt</code> 结尾的文件，将它们放到安卓设备的 <code>/sdcard/rime</code> 文件夹（主目录下的 <code>rime</code> 文件夹）。</p>
+</li>
+<li>
+<p>放好后，再次打开同文输入法。选择“部署”，等待一段时间后，再选择“输入”&gt;“方案”，根据自己的需要勾选输入方案。选完点“确定”。</p>
+</li>
+<li>
+<p>到打字界面，长按输入法左下角“選單”，在选单中选择输入法。</p>
+</li>
+</ol>
+<p>有需要的话，也可以参阅 Trime 输入法的 <a href="https://github.com/osfans/trime/wiki/UserGuide">文档</a>。</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="ios"><a class="header" href="#ios">iOS</a></h1>
+<ol>
+<li>
+<p>至苹果应用商店下载安装 iRime 输入法。</p>
+</li>
+<li>
+<p>在电脑上点击下方链接，下载输入法文件。</p>
+<ul>
+<li><a href="https://codeload.github.com/NGLI/rime-wugniu_zaonhe/zip/master">上海</a>（包含中派上海、老派上海和松江三种口音）</li>
+<li><a href="https://codeload.github.com/NGLI/rime-wugniu_soutseu/zip/master">苏州</a></li>
+<li><a href="https://codeload.github.com/NGLI/rime-wugniu_kashin/zip/master">嘉兴</a>（包含桐乡、海宁、海盐、嘉兴、嘉善五种口音）</li>
+<li><a href="https://codeload.github.com/NGLI/rime-wugniu_gninpou/zip/master">宁波</a>（包含宁波和鄞州两种口音）</li>
+</ul>
+</li>
+<li>
+<p>解压下载好的压缩包，找到以 <code>.yaml</code> 结尾的输入法文件。</p>
+</li>
+<li>
+<p>点击 <a href="https://github.com/shinzoqchiuq/ngli-default.custom.yaml/archive/refs/heads/main.zip">此处</a> 下载压缩包，解压后可得配置文件 <code>default.custom.yaml</code>。打开文件，应当显示为如下内容。</p>
+<pre><code class="language-yaml">patch:
+schema_list:
+    - schema: wugniu_zaonhe        # 上海
+    - schema: wugniu_zaonhe_laupha # 上海（老派）
+    - schema: wugniu_sonkaon       # 松江
+    - schema: wugniu_soutseu       # 苏州
+    - schema: wugniu_donshian      # 桐乡
+    - schema: wugniu_haegnin       # 海宁
+    - schema: wugniu_haeye         # 海盐
+    - schema: wugniu_kashin        # 嘉兴
+    - schema: wugniu_kazoe         # 嘉善
+    - schema: wugniu_gninpou       # 宁波
+    - schema: wugniu_gnincieu      # 鄞州
+</code></pre>
+<p><code>-schema: </code> 后面跟输入方案的名称。不需要某种输入法，就将那一行删去，只保留需要的。如果需要更多的输入法，也可以自行在列表中修改添加。具体可以参照 Rime 官方的 <a href="https://github.com/rime/home/wiki/CustomizationGuide#%E4%B8%80%E4%BE%8B%E5%AE%9A%E8%A3%BD%E6%96%B9%E6%A1%88%E9%81%B8%E5%96%AE">教程</a>。</p>
+</li>
+<li>
+<p>确保电脑和 iOS 设备处在同一个 WiFi 下。在 iOS 设备上点击 iRime 的图标，选择“电脑快传”。按照说明在电脑浏览器上输入 iOS 设备上显示的网址。</p>
+</li>
+<li>
+<p>打开网址后，在列表内找到 <code>default.custom.yaml</code> 点击垃圾桶按钮将它删掉。再点击“上传文件”，将刚才解压得到的输入法文件以及第 4 步新建的 <code>default.custom.yaml</code> 上传上去。</p>
+</li>
+<li>
+<p>退出 iOS 设备上“电脑快传”的页面，先点击“部署”，等部署完成后，再点击“选择方案”，根据自己的需要勾选输入方案。</p>
+</li>
+<li>
+<p>到打字界面，点击键盘图标，在选单中选择输入法。</p>
+</li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="使用-1"><a class="header" href="#使用-1">使用</a></h2>
+<ul>
+<li><a href="%E4%BD%BF%E7%94%A8/%E6%A8%A1%E7%B3%8A%E9%9F%B3.html">模糊音</a></li>
+<li><a href="%E4%BD%BF%E7%94%A8/%E8%BE%93%E5%85%A5%E6%8F%90%E7%A4%BA.html">输入提示</a></li>
+<li><a href="%E4%BD%BF%E7%94%A8/%E5%8F%8D%E6%9F%A5.html">反查</a></li>
+<li><a href="%E4%BD%BF%E7%94%A8/%E8%87%AA%E5%AE%9A%E4%B9%89%E7%9F%AD%E8%AF%AD.html">自定义短语</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="模糊音"><a class="header" href="#模糊音">模糊音</a></h1>
+<p>有几个输入法默认开启了一些模糊音设置。如果使用者想要手动调整模糊音，可以点击 <a href="https://github.com/NGLI/rime-custom/archive/master.zip">此处</a> 下载模糊音定制模板。解压后找到对应地区的 <code>.custom.yaml</code> 结尾的文件。用记事本或其他文本编辑器打开它。</p>
+<p>比如在 <code>wugniu_gninpou.custom.yaml</code> 里提供了「约一不分」这一模糊音，若想要关闭这一模糊音，只需在下面两行代码的前面加上 # 号。</p>
+<pre><code class="language-yaml">    - derive/ia(?=q|h)/i/
+    - derive/ya(?=q|h)/yi/
+</code></pre>
+<p>又如 <code>wugniu_gninpou.custom.yaml</code> 文件中还提供了「胡符不分」这一模糊音，但默认处于关闭状态。只需删去下面这行代码前的 # 号，就可以开启这一设置。</p>
+<pre><code class="language-yaml">    #- derive/wu$/vu/
+</code></pre>
+<p>需要注意的是 YAML 格式的文件使用缩进来表示层级关系。所以在定制模糊音时要注意不要把行首的空格也删去了。</p>
+<p>文件中每一类模糊音设置前都有文字说明，只要对照这些说明增删 # 号就行。</p>
+<p>另外还有一些容错设置，允许用户把 au 打成 ao ，把 ao 打成 oa 等。这些容错设置也是默认开启的。</p>
+<p>文件中还提供了转换为 协会式拼音 的选项。只需删去所有「轉爲吳語協會式拼音」和「顯示吳語協會式拼音」小节下的 # 号即可。</p>
+<p>更改完后，记得保存。保存好之后，将文件放到 Rime 输入法的用户文件夹中。Windows 系统下用户文件夹的位置在 <code>%APPDATA%\Rime</code>，Mac OS 下是 <code>~/Library/Rime</code>，Linux 下是 <code>~/.config/ibus/rime</code>。Windows 下也可以通过右键任务栏上的 Rime 图标来找到用户文件夹。</p>
+<p>将文件放入用户文件夹之后，右键 Rime 图标点击“重新部署”。稍等一会儿就能生效了。</p>
+<p>更多定制方法，请参照 Rime 的 <a href="https://github.com/rime/home/wiki/CustomizationGuide#%E5%AE%9A%E8%A3%BD%E6%8C%87%E5%8D%97">定制指南</a>。</p>
+<p>如果用户会正则表达式，也可以参照 Rime 网站上 <a href="https://github.com/rime/home/wiki/SpellingAlgebra">有关拼写运算的文档</a>，自己定制模糊音甚至拼音方案。</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="输入提示"><a class="header" href="#输入提示">输入提示</a></h1>
+<p>在输入时输入法会有输入提示。提示使用者选项中每个字的读音。</p>
+<p>因为使用者在打字时并不需要输入声调，所以输入提示默认是不显示声调的。但如果使用者出于学习或其他目的，想要在打字时知道这些字的单字调，以下几种输入方案提供了这一功能。</p>
+<ul>
+<li><code>wugniu_soutseu</code>：苏州</li>
+<li><code>wugniu_haeye</code>：海盐</li>
+<li><code>wugniu_kashin</code>：嘉兴</li>
+<li><code>wugniu_kazoe</code>：嘉善</li>
+</ul>
+<p>如果使用者需要，可以点击 <a href="https://github.com/NGLI/rime-custom/archive/master.zip">此处</a> 下载模糊音定制模板。解压后找到对应地区的 <code>.custom.yaml</code> 结尾的文件。用记事本或其他文本编辑器打开它。</p>
+<p>模糊音模板文件内，找到去「輸入提示設置」这一节，删去这一节下面这几行代码前的 # 号</p>
+<pre><code class="language-yaml">    #- xform/( .+)\d/$1/
+    #- xform/\d(.+?)(?=\b)/$1/
+</code></pre>
+<pre><code class="language-yaml">    #- xlit/12345678/¹²³⁴⁵⁶⁷⁸/
+</code></pre>
+<p>同时在下面这行前面加上 # 号</p>
+<pre><code class="language-yaml">    - xform/\d//
+</code></pre>
+<p>更改完后，记得保存。保存好之后，将文件放到 Rime 输入法的用户文件夹中。Windows 系统下用户文件夹的位置在 <code>%APPDATA%\Rime</code>，Mac OS 下是 <code>~/Library/Rime</code>，Linux 下是 <code>~/.config/ibus/rime</code>。Windows 下也可以通过右键任务栏上的 Rime 图标来找到用户文件夹。</p>
+<p>将文件放入用户文件夹之后，右键 Rime 图标点击“重新部署”。稍等一会儿就能生效了。</p>
+<p>更多定制方法，请参照 Rime 的 <a href="https://github.com/rime/home/wiki/CustomizationGuide#%E5%AE%9A%E8%A3%BD%E6%8C%87%E5%8D%97">定制指南</a>。</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="反查"><a class="header" href="#反查">反查</a></h1>
+<p>如果不确定某个字在当地方言里的读音。吴语学堂的这些输入方案提供了两种形式的反查。一种是通过普通话反查，还有一种是通过笔画反查。按下 <code>`</code> 键，键入完整的汉语拼音，就能通过汉语拼音反查字音。同样按下 <code>`</code> 键，键入 <code>hspnz</code> 就能通过笔画反查字音，这里的 <code>hspnz</code> 分别代表 <code>一丨丿丶乙</code> 这五种基本笔画。</p>
+<p>比如使用宁波话输入法，想查找“山”字在宁波话中的读音。就可以按下 <code>`</code> 键，键入 <code>shan</code> ，或是键入 <code>szs</code> 。</p>
+<p><img src="%E4%BD%BF%E7%94%A8/%E5%8F%8D%E6%9F%A5.assets/%E5%8F%8D%E6%9F%A5.png" alt="反查" /></p>
+<p>反查主要是为了让使用者确定某个字的拼写，所以反查不显示声调。但以下这几种输入方案可以开启声调显示。</p>
+<ul>
+<li><code>wugniu_soutseu</code>：苏州</li>
+<li><code>wugniu_haeye</code>：海盐</li>
+<li><code>wugniu_kashin</code>：嘉兴</li>
+<li><code>wugniu_kazoe</code>：嘉善</li>
+</ul>
+<p>如果使用者需要，可以点击 <a href="https://github.com/NGLI/rime-custom/archive/master.zip">此处</a> 下载模糊音定制模板。解压后找到对应地区的 <code>.custom.yaml</code> 结尾的文件。用记事本或其他文本编辑器打开它。</p>
+<p>模糊音模板文件内，会有「反查標註設置」这一节。想要开启声调显示，可以删去这一小节下这行代码前的 # 号</p>
+<pre><code class="language-yaml">    #- xlit/12345678/¹²³⁴⁵⁶⁷⁸/
+</code></pre>
+<p>同时在下面这行前面加上 # 号</p>
+<pre><code class="language-yaml">    - xform/\d//
+</code></pre>
+<p>更改完后，记得保存。保存好之后，将文件放到 Rime 输入法的用户文件夹中。Windows 系统下用户文件夹的位置在 <code>%APPDATA%\Rime</code>，Mac OS 下是 <code>~/Library/Rime</code>，Linux 下是 <code>~/.config/ibus/rime</code>。Windows 下也可以通过右键任务栏上的 Rime 图标来找到用户文件夹。</p>
+<p>将文件放入用户文件夹之后，右键 Rime 图标点击“重新部署”。稍等一会儿就能生效了。</p>
+<p>更多定制方法，请参照 Rime 的 <a href="https://github.com/rime/home/wiki/CustomizationGuide#%E5%AE%9A%E8%A3%BD%E6%8C%87%E5%8D%97">定制指南</a>。</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="自定义短语"><a class="header" href="#自定义短语">自定义短语</a></h1>
+<p>吴语学堂的这些输入方案支持用户自定义短语。</p>
+<p>使用者可以在用户文件夹内新建名为 <code>custom_phrase.txt</code> 的文件，在文件中添加自定义的短语。</p>
+<p>自定义短语的格式为短语、拼音、字频，三者用 <code>tab</code> 键分隔。示例如下。</p>
+<pre><code>吳語	wu gniu	100
+</code></pre>
+<p>一些文本编辑器会将 <code>tab</code> 键转换成空格，导致自定义短语无法生效。若出现这种情况，请检查编辑器的设置，确保三者之间使用 <code>tab</code> 键分隔。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        <script type="text/javascript">
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+    </body>
+</html>

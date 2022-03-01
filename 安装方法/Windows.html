@@ -1,0 +1,245 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Windows - 吴语学堂拼音输入方案合集</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../index.html"><strong aria-hidden="true">1.</strong> 吴语学堂拼音输入方案合集</a></li><li class="chapter-item expanded "><a href="../安装方法/安装方法.html"><strong aria-hidden="true">2.</strong> 安装方法</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../安装方法/Windows.html" class="active"><strong aria-hidden="true">2.1.</strong> Windows</a></li><li class="chapter-item expanded "><a href="../安装方法/macOS.html"><strong aria-hidden="true">2.2.</strong> macOS</a></li><li class="chapter-item expanded "><a href="../安装方法/Linux.html"><strong aria-hidden="true">2.3.</strong> Linux</a></li><li class="chapter-item expanded "><a href="../安装方法/Android.html"><strong aria-hidden="true">2.4.</strong> Android</a></li><li class="chapter-item expanded "><a href="../安装方法/iOS.html"><strong aria-hidden="true">2.5.</strong> iOS</a></li></ol></li><li class="chapter-item expanded "><a href="../使用/使用.html"><strong aria-hidden="true">3.</strong> 使用</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../使用/模糊音.html"><strong aria-hidden="true">3.1.</strong> 模糊音</a></li><li class="chapter-item expanded "><a href="../使用/输入提示.html"><strong aria-hidden="true">3.2.</strong> 输入提示</a></li><li class="chapter-item expanded "><a href="../使用/反查.html"><strong aria-hidden="true">3.3.</strong> 反查</a></li><li class="chapter-item expanded "><a href="../使用/自定义短语.html"><strong aria-hidden="true">3.4.</strong> 自定义短语</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">吴语学堂拼音输入方案合集</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="windows下安装方法"><a class="header" href="#windows下安装方法">Windows下安装方法</a></h1>
+<h3 id="安装时添加输入方案"><a class="header" href="#安装时添加输入方案">安装时添加输入方案</a></h3>
+<ol>
+<li>
+<p>打开 Rime 输入法的网站 https://rime.im/ ，点击小狼毫的图标下载输入法的安装包。当前版本为 0.14.3。</p>
+<p><img src="Windows.assets/Windows_%E4%B8%8B%E8%BD%BD_Rime.png" alt="Windows_下载_Rime" /></p>
+</li>
+<li>
+<p>下载好安装包之后，双击安装。</p>
+<p>如果弹出警告，点开“更多信息”选择“仍要运行”。（下图是安装 0.13.0 版时截的图，0.14.3 版类似）</p>
+<p><img src="Windows.assets/%E4%BB%8D%E8%A6%81%E8%BF%90%E8%A1%8C.png" alt="仍要运行" /></p>
+<p>同意许可证，选择安装位置。点击“安装”。</p>
+<p><img src="Windows.assets/Windows_Rime_%E5%AE%89%E8%A3%851.png" alt="Windows_Rime_安装1" /></p>
+<p><img src="Windows.assets/Windows_Rime_%E5%AE%89%E8%A3%852.png" alt="Windows_Rime_安装2" /></p>
+</li>
+<li>
+<p>如果是第一次安装，安装进行到一半的时候，会弹出“【小狼毫】安裝選項”的界面。这里可以设定将输入法安装到哪种系统语言下，也可以自定义用户文件夹的位置。这里建议使用默认位置，避免给之后安装输入方案带来不必要的麻烦。选择完后点击“安裝”。</p>
+<p><img src="Windows.assets/%E5%AE%89%E8%A3%9D%E9%81%B8%E9%A0%85.png" alt="安裝選項" /></p>
+</li>
+<li>
+<p>稍等一段时间，等到安装程序提示成功。点击“完成”结束安装。</p>
+<p><img src="Windows.assets/Windows_Rime_%E5%AE%89%E8%A3%853.png" alt="Windows_Rime_安装3" /></p>
+</li>
+<li>
+<p>点击在任务栏上输入法的图标，选择小狼毫。</p>
+<p><img src="Windows.assets/%E9%80%89%E6%8B%A9%E5%B0%8F%E7%8B%BC%E6%AF%AB.png" alt="选择小狼毫" /></p>
+<p>选择好之后，打开任何一个编辑器或输入框，按 <code>F4</code> 或 <code>Ctrl+`</code> 唤出“方案選單”，可以发现选单中已经有了几种输入方案。如果没有更多需求的话，就可以选一种打字了。</p>
+<p><img src="Windows.assets/%E6%96%B9%E6%A1%88%E9%81%B8%E5%96%AE1.png" alt="方案選單1" /></p>
+</li>
+</ol>
+<h3 id="添加输入方案--更新输入方案"><a class="header" href="#添加输入方案--更新输入方案">添加输入方案 / 更新输入方案</a></h3>
+<p>如果需要添加更多输入方案，可以参照以下步骤。</p>
+<ol>
+<li>
+<p>在任务栏 Rime 图标这边右键打开菜单。</p>
+<p><img src="Windows.assets/%E5%8F%B3%E9%94%AE%E6%89%93%E5%BC%80%E8%8F%9C%E5%8D%95.png" alt="右键打开菜单" /></p>
+</li>
+<li>
+<p>打开后选择“輸入法設定”，就能进入“【小狼毫】方案選單設定”的界面。点击下方的“獲取更多輸入法方案...”。</p>
+<p><img src="Windows.assets/%E6%96%B9%E6%A1%88%E9%81%B8%E5%96%AE%E8%A8%AD%E5%AE%9A1.png" alt="方案選單設定1" /></p>
+</li>
+<li>
+<p>点完会弹出一个命令行界面。在这个命令行中输入仓库的地址。仓库地址在输入方案网页的左上角。注意是输入<strong>仓库地址</strong>，而非输入方案的名称。</p>
+<p><img src="Windows.assets/%E4%BB%93%E5%BA%93%E5%9C%B0%E5%9D%80.png" alt="仓库地址" /></p>
+<p>比如要安装宁波话输入法，就可以输入 <code>NGLI/rime-wugniu_gninpou</code>。</p>
+<p>输入完按下回车，等待一段时间。</p>
+<p><img src="Windows.assets/plum.png" alt="plum" /></p>
+</li>
+<li>
+<p>等到命令行界面不再变化，就可以关掉命令行界面了。再回到“【小狼毫】方案選單設定”的界面，可以发现输入法选单多了几种输入法。可以点击输入法的名字查看输入法的简介，然后根据个人需要勾选。选完点击“中”。</p>
+<p><img src="Windows.assets/%E6%96%B9%E6%A1%88%E9%81%B8%E5%96%AE%E8%A8%AD%E5%AE%9A2.png" alt="方案選單設定2" /></p>
+<p>之后是介面風格設定，选择一个自己喜欢的配色即可。选完点击“中”。</p>
+<p><img src="Windows.assets/%E4%BB%8B%E9%9D%A2%E9%A2%A8%E6%A0%BC%E8%A8%AD%E5%AE%9A.png" alt="介面風格設定" /></p>
+</li>
+<li>
+<p>完成后，再次右键任务栏 Rime 图标打开菜单，选择“重新部署”。稍等一会儿，待其部署完成即可。</p>
+<p><img src="Windows.assets/%E8%8F%9C%E5%8D%95.png" alt="菜单" /></p>
+<p>这种方法可以用于添加或更新输入方案。更新输入方案时，有可能出现更新失败的情形。可以到用户文件夹下，将已有的输入法文件删除。再试着重新安装一遍输入方案。</p>
+</li>
+<li>
+<p>安装完输入方案后，打开任何一个编辑器或输入框，按 <code>F4</code> 或 <code>Ctrl+`</code> 唤出“方案選單”，从选单中选择想要的输入法。开始打字。</p>
+<p><img src="Windows.assets/%E6%96%B9%E6%A1%88%E9%81%B8%E5%96%AE2.png" alt="方案選單2" /></p>
+</li>
+</ol>
+<h3 id="视频教程"><a class="header" href="#视频教程">视频教程：</a></h3>
+<p>以下两个视频教程是以版本 0.13.0 为例讲解的，与当前版本的安装方法有差异，仅供参考。</p>
+<p>https://www.bilibili.com/video/BV1db411S7gf</p>
+<p>https://www.bilibili.com/video/BV1qb411L7xt</p>
+<p>有需要的话，也可以参阅 Rime 输入法的 <a href="https://rime.im/docs/">文档</a>。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../安装方法/安装方法.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="../安装方法/macOS.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../安装方法/安装方法.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="../安装方法/macOS.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+    </body>
+</html>
