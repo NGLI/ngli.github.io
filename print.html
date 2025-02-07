@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="zh-CN" class="light" dir="ltr">
+<html lang="zh-CN" class="light sidebar-visible" dir="ltr">
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
@@ -8,7 +8,7 @@
 
 
         <!-- Custom HTML head -->
-        
+
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff">
@@ -31,15 +31,17 @@
 
         <!-- Custom theme stylesheets -->
 
-    </head>
-    <body class="sidebar-visible no-js">
-    <div id="body-container">
+
         <!-- Provide site root to javascript -->
         <script>
             var path_to_root = "";
             var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
         </script>
-
+        <!-- Start loading toc.js asap -->
+        <script src="toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
         <!-- Work around some values being stored in localStorage wrapped in quotes -->
         <script>
             try {
@@ -61,19 +63,16 @@
             var theme;
             try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
             if (theme === null || theme === undefined) { theme = default_theme; }
-            var html = document.querySelector('html');
+            const html = document.documentElement;
             html.classList.remove('light')
             html.classList.add(theme);
-            var body = document.querySelector('body');
-            body.classList.remove('no-js')
-            body.classList.add('js');
+            html.classList.add("js");
         </script>
 
         <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
 
         <!-- Hide / unhide sidebar before it is displayed -->
         <script>
-            var body = document.querySelector('body');
             var sidebar = null;
             var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
             if (document.body.clientWidth >= 1080) {
@@ -83,43 +82,25 @@
                 sidebar = 'hidden';
             }
             sidebar_toggle.checked = sidebar === 'visible';
-            body.classList.remove('sidebar-visible');
-            body.classList.add("sidebar-" + sidebar);
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
         </script>
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
-            <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="index.html"><strong aria-hidden="true">1.</strong> 吴语学堂拼音输入方案合集</a></li><li class="chapter-item expanded "><a href="安装方法/安装方法.html"><strong aria-hidden="true">2.</strong> 安装方法</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="安装方法/Windows.html"><strong aria-hidden="true">2.1.</strong> Windows</a></li><li class="chapter-item expanded "><a href="安装方法/macOS.html"><strong aria-hidden="true">2.2.</strong> macOS</a></li><li class="chapter-item expanded "><a href="安装方法/Linux.html"><strong aria-hidden="true">2.3.</strong> Linux</a></li><li class="chapter-item expanded "><a href="安装方法/Android.html"><strong aria-hidden="true">2.4.</strong> Android</a></li><li class="chapter-item expanded "><a href="安装方法/iOS.html"><strong aria-hidden="true">2.5.</strong> iOS</a></li></ol></li><li class="chapter-item expanded "><a href="使用/使用.html"><strong aria-hidden="true">3.</strong> 使用</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="使用/模糊音.html"><strong aria-hidden="true">3.1.</strong> 模糊音</a></li><li class="chapter-item expanded "><a href="使用/输入提示.html"><strong aria-hidden="true">3.2.</strong> 输入提示</a></li><li class="chapter-item expanded "><a href="使用/反查.html"><strong aria-hidden="true">3.3.</strong> 反查</a></li><li class="chapter-item expanded "><a href="使用/自定义短语.html"><strong aria-hidden="true">3.4.</strong> 自定义短语</a></li></ol></li></ol>
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
             </div>
-            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
-
-        <!-- Track and set sidebar scroll position -->
-        <script>
-            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
-            sidebarScrollbox.addEventListener('click', function(e) {
-                if (e.target.tagName === 'A') {
-                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
-                }
-            }, { passive: true });
-            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
-            sessionStorage.removeItem('sidebar-scroll');
-            if (sidebarScrollTop) {
-                // preserve sidebar scroll position when navigating via links within sidebar
-                sidebarScrollbox.scrollTop = sidebarScrollTop;
-            } else {
-                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
-                var activeSection = document.querySelector('#sidebar .active');
-                if (activeSection) {
-                    activeSection.scrollIntoView({ block: 'center' });
-                }
-            }
-        </script>
 
         <div id="page-wrapper" class="page-wrapper">
 
             <div class="page">
-                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar-hover-placeholder"></div>
                 <div id="menu-bar" class="menu-bar sticky">
                     <div class="left-buttons">
                         <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
@@ -483,21 +464,28 @@ schema_list:
 </ol>
 <p>有需要的话，也可以参阅 Rime 输入法的 <a href="https://rime.im/docs/">文档</a>。</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="android"><a class="header" href="#android">Android</a></h1>
+<p>安卓平台下，有两个输入法应用可供选择，分别是 <a href="https://github.com/osfans/trime">同文输入法（Trime）</a> 和 <a href="https://github.com/fcitx5-android/fcitx5-android">小企鹅输入法（fcitx5-android）</a>。在安装前，先要下载一些文件。</p>
 <ol>
 <li>
-<p>安装同文输入法。具体可以参照 Trime 的 <a href="https://github.com/osfans/trime#%E5%90%8C%E6%96%87%E5%AE%89%E5%8D%93%E8%BC%B8%E5%85%A5%E6%B3%95%E5%B9%B3%E8%87%BAtrime-rime-ime-for-android">网站</a>。</p>
-</li>
-<li>
-<p>安装好之后，打开同文输入法，点击“启用”，再点击“选取”选择同文输入法平台。</p>
-</li>
-<li>
-<p>点击下方链接，下载输入法文件。</p>
+<p>点击下方链接，下载输入方案文件。</p>
 <ul>
 <li><a href="https://codeload.github.com/NGLI/rime-wugniu_zaonhe/zip/master">上海</a>（包含中派上海、老派上海和松江三种口音）</li>
 <li><a href="https://codeload.github.com/NGLI/rime-wugniu_soutseu/zip/master">苏州</a></li>
 <li><a href="https://codeload.github.com/NGLI/rime-wugniu_kashin/zip/master">嘉兴</a>（包含桐乡、海宁、海盐、嘉兴、嘉善五种口音）</li>
 <li><a href="https://codeload.github.com/NGLI/rime-wugniu_gninpou/zip/master">宁波</a>（包含宁波和鄞州两种口音）</li>
 </ul>
+</li>
+<li>
+<p>解压下载好的压缩包，找到以 <code>.yaml</code> 结尾的输入方案文件。</p>
+</li>
+</ol>
+<h2 id="同文输入法"><a class="header" href="#同文输入法">同文输入法</a></h2>
+<ol>
+<li>
+<p>安装同文输入法。具体可以参照 Trime 的 <a href="https://github.com/osfans/trime#%E5%90%8C%E6%96%87%E5%AE%89%E5%8D%93%E8%BC%B8%E5%85%A5%E6%B3%95%E5%B9%B3%E8%87%BAtrime-rime-ime-for-android">网站</a>。</p>
+</li>
+<li>
+<p>安装好之后，打开同文输入法，按界面指引启用输入法。</p>
 </li>
 <li>
 <p>输入法需要基础配置文件和基础词表，同时也依赖朙月拼音和五筆畫实现反查。点击下方链接下载。</p>
@@ -509,7 +497,7 @@ schema_list:
 </ul>
 </li>
 <li>
-<p>解压第 3 步和第 4 步下载好的几个压缩包，找到所有以 <code>.yaml</code> 和 <code>.txt</code> 结尾的文件，将它们放到安卓设备的 <code>/sdcard/rime</code> 文件夹（主目录下的 <code>rime</code> 文件夹）。</p>
+<p>解压前面下载好的几个压缩包，找到所有以 <code>.yaml</code> 和 <code>.txt</code> 结尾的文件，将它们放到安卓设备的 <code>/sdcard/rime</code> 文件夹（主目录下的 <code>rime</code> 文件夹）。</p>
 </li>
 <li>
 <p>放好后，再次打开同文输入法。选择“部署”，等待一段时间后，再选择“输入”&gt;“方案”，根据自己的需要勾选输入方案。选完点“确定”。</p>
@@ -519,6 +507,43 @@ schema_list:
 </li>
 </ol>
 <p>有需要的话，也可以参阅 Trime 输入法的 <a href="https://github.com/osfans/trime/wiki/UserGuide">文档</a>。</p>
+<h2 id="小企鹅输入法"><a class="header" href="#小企鹅输入法">小企鹅输入法</a></h2>
+<ol>
+<li>
+<p>安装 <a href="https://f-droid.org/packages/org.fcitx.fcitx5.android">小企鹅输入法</a>，并安装 <a href="https://f-droid.org/zh_Hans/packages/org.fcitx.fcitx5.android.plugin.rime/">Rime 插件</a>。</p>
+</li>
+<li>
+<p>安装好之后，打开小企鹅输入法，按界面指引启用输入法。</p>
+</li>
+<li>
+<p>在输入法界面，点“输入法”，再点按右下角的加号，添加“中州韵”。</p>
+</li>
+<li>
+<p>点击 <a href="https://github.com/shinzoqchiuq/ngli-default.custom.yaml/archive/refs/heads/main.zip">此处</a> 下载压缩包，解压后可得配置文件 <code>default.custom.yaml</code>。打开文件，应当显示为如下内容。</p>
+<pre><code class="language-yaml">patch:
+schema_list:
+    - schema: wugniu_zaonhe        # 上海
+    - schema: wugniu_zaonhe_laupha # 上海（老派）
+    - schema: wugniu_sonkaon       # 松江
+    - schema: wugniu_soutseu       # 苏州
+    - schema: wugniu_donshian      # 桐乡
+    - schema: wugniu_haegnin       # 海宁
+    - schema: wugniu_haeye         # 海盐
+    - schema: wugniu_kashin        # 嘉兴
+    - schema: wugniu_kazoe         # 嘉善
+    - schema: wugniu_gninpou       # 宁波
+    - schema: wugniu_gnincieu      # 鄞州
+</code></pre>
+<p><code>-schema: </code> 后面跟输入方案的名称。不需要某种输入法，就将那一行删去，只保留需要的。如果需要更多的输入法，也可以自行在列表中修改添加。具体可以参照 Rime 官方的 <a href="https://github.com/rime/home/wiki/CustomizationGuide#%E4%B8%80%E4%BE%8B%E5%AE%9A%E8%A3%BD%E6%96%B9%E6%A1%88%E9%81%B8%E5%96%AE">教程</a>。</p>
+</li>
+<li>
+<p>将之前下载的所有以 <code>.yaml</code> 结尾的文件，将它们放到安卓设备的 <code>/sdcard/Android/data/org.fcitx.fcitx5.android/files/data/rime</code> 文件夹（主目录下的 <code>Android/data/org.fcitx.fcitx5.android/files/data/rime</code> 文件夹）。</p>
+</li>
+<li>
+<p>到打字界面，按键盘下方地球图标，切换到中州韵。点按左上角“&gt;”号，展开选单，点击“…”，点按“&lt;&gt;”图标切换输入方案。</p>
+</li>
+</ol>
+<p>有需要的话，也可以查看小企鹅输入法的 <a href="https://fcitx5-android.github.io/">网站</a>。</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="ios"><a class="header" href="#ios">iOS</a></h1>
 <p>iOS 平台下，有两个输入法应用可供选择，分别是<a href="https://github.com/imfuxiao/Hamster">「仓」输入法</a> 和 <a href="https://github.com/jimmy54/iRime">iRime 输入法</a>。在安装前，先要在电脑上完成一些准备工作。</p>
 <ol>
