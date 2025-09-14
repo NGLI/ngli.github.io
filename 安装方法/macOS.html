@@ -182,7 +182,7 @@
 <p>安装 Rime 输入法。安装和使用方法见 Rime 输入法的网站 https://rime.im/ 。</p>
 </li>
 <li>
-<p>点击下方链接，下载输入法文件。</p>
+<p>点击下方链接，下载输入方案文件。</p>
 <ul>
 <li><a href="https://codeload.github.com/NGLI/rime-wugniu_zaonhe/zip/master">上海</a>（包含中派上海、老派上海和松江三种口音）</li>
 <li><a href="https://codeload.github.com/NGLI/rime-wugniu_soutseu/zip/master">苏州</a></li>
@@ -191,7 +191,7 @@
 </ul>
 </li>
 <li>
-<p>点击 <a href="https://github.com/shinzoqchiuq/ngli-default.custom.yaml/archive/refs/heads/main.zip">此处</a> 下载压缩包，解压后可得配置文件 <code>default.custom.yaml</code>。将上一步下载的输入法文件和这一步下载的配置文件放到Rime的用户文件夹（<code>~/Library/Rime/</code>，可以通过点击输入法状态栏上的Rime图标，选择“用户设定...”来打开）。</p>
+<p>点击 <a href="https://github.com/shinzoqchiuq/ngli-default.custom.yaml/archive/refs/heads/main.zip">此处</a> 下载压缩包，解压后可得配置文件 <code>default.custom.yaml</code>。将上一步下载的输入方案文件和这一步下载的配置文件放到Rime的用户文件夹（<code>~/Library/Rime/</code>，可以通过点击输入方案状态栏上的Rime图标，选择“用户设定...”来打开）。</p>
 </li>
 <li>
 <p>打开配置文件 <code>default.custom.yaml</code>，应当显示为如下内容。</p>
@@ -209,13 +209,13 @@ schema_list:
     - schema: wugniu_gninpou       # 宁波
     - schema: wugniu_gnincieu      # 鄞州
 </code></pre>
-<p><code>-schema: </code> 后面跟输入方案的名称。不需要某种输入法，就将那一行删去。如果需要更多的输入法，也可以自行在列表中修改添加。具体可以参照Rime官方的 <a href="https://github.com/rime/home/wiki/CustomizationGuide#%E4%B8%80%E4%BE%8B%E5%AE%9A%E8%A3%BD%E6%96%B9%E6%A1%88%E9%81%B8%E5%96%AE">教程</a>。</p>
+<p><code>-schema: </code> 后面跟输入方案的名称。不需要某种输入方案，就将那一行删去。如果需要更多的输入方案，也可以自行在列表中修改添加。具体可以参照Rime官方的 <a href="https://github.com/rime/home/wiki/CustomizationGuide#%E4%B8%80%E4%BE%8B%E5%AE%9A%E8%A3%BD%E6%96%B9%E6%A1%88%E9%81%B8%E5%96%AE">教程</a>。</p>
 </li>
 <li>
 <p>在输入法状态栏上点击“重新部署”。等待一段时间。</p>
 </li>
 <li>
-<p>按<code>F4</code>或<code>Ctrl+`</code>，从选单中选择想要的输入法。</p>
+<p>按<code>F4</code>或<code>Ctrl+`</code>，从选单中选择想要的输入方案。</p>
 </li>
 </ol>
 <h3 id="方法二"><a class="header" href="#方法二">方法二</a></h3>
@@ -229,11 +229,11 @@ schema_list:
 </code></pre>
 </li>
 <li>
-<p>以安装宁波话输入法为例，运行以下命令，下载输入法码表。</p>
+<p>以安装宁波话输入方案为例，运行以下命令，下载输入方案码表。</p>
 <pre><code class="language-shell">cd plum
 bash rime-install NGLI/rime-wugniu_gninpou
 </code></pre>
-<p>要安装其他输入法，只需将 <code>NGLI/rime-wugniu_gninpou</code> 替换为仓库地址就可以了。注意是<strong>仓库地址</strong>不是输入法的方案名称。</p>
+<p>要安装其他输入方案，只需将 <code>NGLI/rime-wugniu_gninpou</code> 替换为仓库地址就可以了。注意是<strong>仓库地址</strong>不是输入方案的方案名称。</p>
 </li>
 <li>
 <p>点击 <a href="https://github.com/shinzoqchiuq/ngli-default.custom.yaml/archive/refs/heads/main.zip">此处</a> 下载压缩包，解压后可得配置文件<code>default.custom.yaml</code>，将它放到Rime的用户文件夹（<code>~/Library/Rime/</code>，可以通过点击Rime图标选择“用户设定...”来打开）内。打开文件，应当显示为如下内容。</p>
@@ -251,13 +251,13 @@ bash rime-install NGLI/rime-wugniu_gninpou
     - schema: wugniu_gninpou       # 宁波
     - schema: wugniu_gnincieu      # 鄞州
 </code></pre>
-<p><code>-schema: </code> 后面跟输入方案的名称。不需要某种输入法，就将那一行删去。如果需要更多的输入法，也可以自行在列表中修改添加。具体可以参照Rime官方的 <a href="https://github.com/rime/home/wiki/CustomizationGuide#%E4%B8%80%E4%BE%8B%E5%AE%9A%E8%A3%BD%E6%96%B9%E6%A1%88%E9%81%B8%E5%96%AE">教程</a>。</p>
+<p><code>-schema: </code> 后面跟输入方案的名称。不需要某种输入方案，就将那一行删去。如果需要更多的输入方案，也可以自行在列表中修改添加。具体可以参照Rime官方的 <a href="https://github.com/rime/home/wiki/CustomizationGuide#%E4%B8%80%E4%BE%8B%E5%AE%9A%E8%A3%BD%E6%96%B9%E6%A1%88%E9%81%B8%E5%96%AE">教程</a>。</p>
 </li>
 <li>
 <p>在输入法状态栏上点击“重新部署”。等待一段时间。</p>
 </li>
 <li>
-<p>按<code>F4</code>或<code>Ctrl+`</code>，从选单中选择想要的输入法。</p>
+<p>按<code>F4</code>或<code>Ctrl+`</code>，从选单中选择想要的输入方案。</p>
 </li>
 </ol>
 <p>有需要的话，也可以参阅 Rime 输入法的 <a href="https://rime.im/docs/">文档</a>。</p>
