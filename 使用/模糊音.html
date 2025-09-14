@@ -177,11 +177,11 @@
                     <main>
                         <h1 id="模糊音"><a class="header" href="#模糊音">模糊音</a></h1>
 <p>有几个输入法默认开启了一些模糊音设置。如果使用者想要手动调整模糊音，可以点击 <a href="https://github.com/NGLI/rime-custom/archive/master.zip">此处</a> 下载模糊音定制模板。解压后找到对应地区的 <code>.custom.yaml</code> 结尾的文件。用记事本或其他文本编辑器打开它。</p>
-<p>比如在 <code>wugniu_gninpou.custom.yaml</code> 里提供了「约一不分」这一模糊音，若想要关闭这一模糊音，只需在下面两行代码的前面加上 # 号。</p>
+<p>比如在 <code>wugniu_gninpou.custom.yaml</code> 里提供了「削 ≈ 吸」这一模糊音，若想要关闭这一模糊音，只需在下面两行代码的前面加上 # 号。</p>
 <pre><code class="language-yaml">    - derive/ia(?=q|h)/i/
     - derive/ya(?=q|h)/yi/
 </code></pre>
-<p>又如 <code>wugniu_gninpou.custom.yaml</code> 文件中还提供了「胡符不分」这一模糊音，但默认处于关闭状态。只需删去下面这行代码前的 # 号，就可以开启这一设置。</p>
+<p>又如 <code>wugniu_gninpou.custom.yaml</code> 文件中还提供了「胡 ≈ 符」这一模糊音，但默认处于关闭状态。只需删去下面这行代码前的 # 号，就可以开启这一设置。</p>
 <pre><code class="language-yaml">    #- derive/wu$/vu/
 </code></pre>
 <p>需要注意的是 YAML 格式的文件使用缩进来表示层级关系。所以在定制模糊音时要注意不要把行首的空格也删去了。</p>
