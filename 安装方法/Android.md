@@ -17,7 +17,7 @@
 
 2. 安装好之后，打开同文输入法，按界面指引启用输入法。
 
-3. 输入法需要基础配置文件和基础词表，同时也依赖朙月拼音和五筆畫实现反查。点击下方链接下载。
+3. 输入方案需要基础配置文件和基础词表，同时也依赖朙月拼音和五筆畫实现反查。点击下方链接下载。
 
     - [Rime 輸入法基礎配置](https://codeload.github.com/rime/rime-prelude/zip/master)
     - [essay](https://codeload.github.com/rime/rime-essay/zip/master)
@@ -58,7 +58,7 @@
         - schema: wugniu_gnincieu      # 鄞州
     ```
 
-    `-schema: ` 后面跟输入方案的名称。不需要某种输入法，就将那一行删去，只保留需要的。如果需要更多的输入法，也可以自行在列表中修改添加。具体可以参照 Rime 官方的 [教程](https://github.com/rime/home/wiki/CustomizationGuide#一例定製方案選單)。
+    `-schema: ` 后面跟输入方案的名称。不需要某种输入方案，就将那一行删去，只保留需要的。如果需要更多的输入方案，也可以自行在列表中修改添加。具体可以参照 Rime 官方的 [教程](https://github.com/rime/home/wiki/CustomizationGuide#一例定製方案選單)。
 
 5. 将之前下载的所有以 `.yaml` 结尾的文件，将它们放到安卓设备的 `/sdcard/Android/data/org.fcitx.fcitx5.android/files/data/rime` 文件夹（主目录下的 `Android/data/org.fcitx.fcitx5.android/files/data/rime` 文件夹）。
 
