@@ -7,7 +7,7 @@
 2. 在终端内运行以下命令，安装 [東風破](https://github.com/rime/plum)（需要先安装 [git](https://git-scm.com/)）。
 
     ```shell
-    curl -fsSL https://git.io/rime-install | bash
+    curl -fsSL https://raw.githubusercontent.com/rime/plum/master/rime-install | bash
     ```
 
 3. 以安装宁波话输入方案为例，运行以下命令，下载输入方案码表。
