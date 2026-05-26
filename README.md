@@ -42,11 +42,14 @@ https://www.wugniu.com/
 - [Rime](https://rime.im/)
 - [Trime](https://github.com/osfans/trime)
 - [iRime](https://github.com/jimmy54/iRime)
+- [「仓」输入法](https://github.com/imfuxiao/Hamster)
+- [fcitx5-rime](https://github.com/fcitx/fcitx5-rime)
+- [fcitx5-android](https://github.com/fcitx5-android)
 
 ## 联系
 
 [吴语学堂](https://www.wugniu.com/)：
 
 - QQ群：955201855
-- 微信公众号：wugniu_com
+- 微信公众号 / 抖音号 / 小红书号：wugniu_com
 - 微博：[吴语学堂微博](https://weibo.com/u/6541762299)
